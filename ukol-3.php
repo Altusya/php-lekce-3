@@ -17,6 +17,7 @@
         'fyzika' => 3,
         'přírodopis' => 1
     ];
+    $average = array_sum($predmety) / count($predmety);
     ?>
 
     <table class="table table-bordered">
@@ -27,14 +28,21 @@
         </tr>
         </thead>
         <tbody>
+
+        <?php
+        foreach ($predmety as $predmet => $znamka) {?>
+
             <tr>
-                <td>prvni sloupec</td>
-                <td>druhy sloupec</td>
+                <td><?php echo $predmet ?></td>
+                <td><?php echo $znamka ?></td>
             </tr>
+        <?php } ?>
+
+
         </tbody>
     </table>
 
-    Průměr:
+    Průměr: <?php echo $average; ?>
 
 </div>
 </body>
