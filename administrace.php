@@ -1,8 +1,10 @@
 <?php
 
-if ( isset($_SESSION ['loggedIn']))
-echo 'přihlášen';
-else echo 'nepřihlášen' ;
+if ( isset($_SESSION['loggedIn']) && $_SESSION['loggedIn']==true) {
+    echo 'přihlášen';
+}else {
+    echo 'nepřihlášen' ;
+}
 
 
 
